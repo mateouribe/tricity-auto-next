@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  @apply text-black;
+  @apply leading-tight;
+  @apply font-outfit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+img {
+  user-select: none !important;
+}
+
+section {
+  @apply bg-white;
+}
+
+@layer base {
+  /* Thin */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-Thin.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  /* Light */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-Light.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  /* Regular */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-Regular.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Medium */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-Medium.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-Bold.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* Extra Bold */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-ExtraBold.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  /* Black */
+  @font-face {
+    font-family: "Outfit";
+    src: url("./assets/fonts/Outfit-Black.woff2") format("woff2"),
+      url("./assets/fonts/Outfit-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-white;
+  @apply shadow-sm;
+  padding: 10px; /* Adjust padding for the arrows */
+  border-radius: 50%; /* Optional: make arrows round */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-pagination-bullet {
+  @apply bg-white; /* Default dot color */
+  opacity: 0.8; /* Make dots fully visible */
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6347; /* Active dot color */
 }
