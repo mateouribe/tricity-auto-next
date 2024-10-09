@@ -45,7 +45,7 @@ const sendContactEmail = async ({
   const formattedDate = new Date().toISOString();
   const mailOptions = {
     from: email,
-    to: "tricityauto1@gmail.com",
+    to: "arismendyuribemateo@gmail.com",
     subject: `New Contact Form Submission from ${firstName} ${lastName}`,
     text: `Name: ${firstName} ${lastName}\nPhone: ${phoneNumber}\nEmail: ${email}\nMessage: ${message}\nReceived at: ${formattedDate}`,
   };

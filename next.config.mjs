@@ -1,14 +1,8 @@
-// next.config.mjs
-
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
-// Ensure cron job runs only on the server side
-if (typeof window === "undefined") {
-  require("./src/cron/inventoryCron");
-}
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ["dealerpull.blob.core.windows.net"],
+  },
+};
 
 export default nextConfig;

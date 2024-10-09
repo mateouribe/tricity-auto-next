@@ -1,7 +1,7 @@
 const ftpConfig = {
-  host: "ftp.samacle.com", // FTP server address
-  user: "u982983725.dealerPull", // FTP username
-  password: "dp_TricityAuto2024", // FTP password
+  host: "ftp.samacle.com",
+  user: "u982983725.dealerPull",
+  password: "dp_TricityAuto2024",
 };
 
 export { ftpConfig };
