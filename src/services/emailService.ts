@@ -45,7 +45,7 @@ const sendContactEmail = async ({
   const formattedDate = new Date().toISOString();
   const mailOptions = {
     from: email,
-    to: "arismendyuribemateo@gmail.com",
+    to: "tricityauto1@gmail.com",
     subject: `New Contact Form Submission from ${firstName} ${lastName}`,
     text: `Name: ${firstName} ${lastName}\nPhone: ${phoneNumber}\nEmail: ${email}\nMessage: ${message}\nReceived at: ${formattedDate}`,
   };
@@ -77,8 +77,7 @@ const sendFinancingEmail = async ({
 }: FinancingEmailOptions): Promise<void> => {
   const formattedDate = new Date().toISOString();
 
-  const xmlContent = `
-    <?xml version="1.0"?>
+  const xmlContent = `<?xml version="1.0"?>
     <adf>
       <prospect status="new">
         <requestdate>${formattedDate}</requestdate>
@@ -110,7 +109,7 @@ const sendFinancingEmail = async ({
   `;
 
   const mailOptionsDealerPull = {
-    from: email || "no-reply@yourdomain.com",
+    from: email || "no-reply@samacle.com",
     to: "tricity@leads.dealerpull.com",
     cc: "samacleinc@gmail.com",
     subject: `New Application for Ontario Loan sent by ${

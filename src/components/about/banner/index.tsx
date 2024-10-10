@@ -1,79 +1,43 @@
+import { TranslationProps } from "@/types/i18nTypes";
 import SectionTitle from "@/components/global/sectionTitle";
 import WhyUsItem from "@/components/global/whyUsItem";
+import Image from "next/image";
 
-const Banner = () => {
-  //   const { t } = useTranslation();
-  //   const container = useRef(null);
-
-  //   useEffect(() => {
-  //     const ctx = gsap.context(() => {
-  //       const tl = gsap.timeline();
-  //       const duration = 0.8;
-  //       const ease = "power4.inOut";
-  //       const delay = "-=0.7";
-
-  //       gsap.set(".title", {
-  //         y: 50,
-  //         opacity: 0,
-  //       });
-  //       gsap.set(".content", {
-  //         y: 50,
-  //         opacity: 0,
-  //       });
-
-  //       tl.to(".title", {
-  //         y: 0,
-  //         opacity: 1,
-  //         duration: duration,
-  //         ease: ease,
-  //       });
-  //       tl.to(
-  //         ".content",
-  //         {
-  //           y: 0,
-  //           opacity: 1,
-  //           duration: duration,
-  //           ease: ease,
-  //         },
-  //         delay
-  //       );
-  //     }, container);
-
-  //     return () => ctx.revert();
-  //   }, []);
-
+const Banner = ({ t }: TranslationProps) => {
   return (
     <section
       className="pt-100 md:pt-tablet lg:pt-desktop p-mobile md:p-tablet lg:p-desktop"
       //  ref={container}
     >
       <SectionTitle
-        title={"title"}
-        subtitle={"subtitle"}
+        title={t("title")}
+        subtitle={t("subtitle")}
         containerClassName={"!gap-5 mb-50 title"}
         isH1
       />
 
       <div className="content">
-        <p>one</p>
+        <p>{t("textOne")}</p>
         <div className="flex flex-col items-stretch justify-center mt-20 md:flex-row gap-50">
           <div className="w-full md:w-[40%] lg:w-1/2">
-            <img
+            <Image
               className="w-full h-full bg-cover"
               src="/assets/images/about-us-image.webp"
               alt="Customer and dealer discussing car purchase at Tricity Auto, a used cars dealership Waterloo, ON"
+              width={500}
+              height={500}
             />
           </div>
           <div className="w-full md:w-[60%] lg:w-1/2">
-            <p>{"test"}</p> <br />
+            <p>{t("textTwo")}</p> <br />
             <br />
-            <p>{"test"}</p>
+            <p>{t("textThree")}</p>
           </div>
         </div>
         <div className="grid w-full grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 mt-50">
           <WhyUsItem
-            title="title"
-            content="content"
+            title={t("whyUs:oneTitle")}
+            content={t("whyUs:oneDescription")}
             icon={
               <svg
                 width="70"
@@ -91,8 +55,8 @@ const Banner = () => {
             }
           />
           <WhyUsItem
-            title="title"
-            content="content"
+            title={t("whyUs:twoTitle")}
+            content={t("whyUs:twoDescription")}
             icon={
               <svg
                 width="70"
@@ -110,8 +74,8 @@ const Banner = () => {
             }
           />
           <WhyUsItem
-            title="title"
-            content="content"
+            title={t("whyUs:threeTitle")}
+            content={t("whyUs:threeDescription")}
             icon={
               <svg
                 width="70"

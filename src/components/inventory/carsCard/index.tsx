@@ -1,6 +1,7 @@
 import Details from "./details";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   vehicle: {
@@ -16,6 +17,8 @@ type Props = {
 };
 
 const CarsCard = ({ vehicle }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <Link
       className="bg-[#fff] rounded-10 flex flex-col overflow-hidden cursor-pointer shadow-sm vehicleContainer min-h-full justify-between hover:scale-[1.01] transition-all duration-500 ease-out hover:shadow-md"
@@ -35,19 +38,19 @@ const CarsCard = ({ vehicle }: Props) => {
       <div className="flex flex-col justify-between h-full p-20">
         <p className="font-medium">{vehicle.title}</p>
         <div className="flex flex-col gap-5 mt-20">
-          <Details title={"hola"} value={vehicle.year} />
-          <Details title={"hola"} value={vehicle.make} />
-          <Details title={"hola"} value={vehicle.model} />
-          <Details title={"hola"} value={vehicle.odometer} />
+          <Details title={t("carDetails:year")} value={vehicle.year} />
+          <Details title={t("carDetails:make")} value={vehicle.make} />
+          <Details title={t("carDetails:model")} value={vehicle.model} />
+          <Details title={t("carDetails:odometer")} value={vehicle.odometer} />
         </div>
         <div className="flex flex-row items-center justify-between mt-10">
-          <span className="text-[18px]">Price:</span>
+          <span className="text-[18px]">{t("carDetails:price")}</span>
           <span className="text-[18px] text-main">{vehicle.price}</span>
         </div>
       </div>
       <div className="w-full p-20">
         <p className="rounded-[5px] border-[2px] border-main w-full py-10 text-center font-medium text-main">
-          Comprar ahora
+          {t("buttons:buyNow")}
         </p>
       </div>
     </Link>

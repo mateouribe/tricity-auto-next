@@ -5,6 +5,8 @@ import VehiclesSearch from "@/components/home/vehiclesSearch";
 import WhyUs from "@/components/home/whyUs";
 import CustomerReviews from "@/components/customerReviews";
 import Contact from "@/components/contact";
+import initTranslations from "../i18n";
+import TranslationsProvider from "@/components/global/translationsProvider";
 
 export const metadata: Metadata = {
   title: "Used Cars Dealership in Waterloo - Tricity Auto",
@@ -21,15 +23,38 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+const namespaces = [
+  "home",
+  "buttons",
+  "inventory",
+  "review",
+  "contact",
+  "whyUs",
+  "carDetails",
+];
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function Home({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const { t, resources } = await initTranslations(locale, namespaces);
+
   return (
-    <main>
-      <Banner />
-      <VehiclesSearch />
-      <Steps />
-      <WhyUs />
-      <CustomerReviews />
-      <Contact />
-    </main>
+    <TranslationsProvider
+      locale={locale}
+      resources={resources}
+      namespaces={namespaces}
+    >
+      <main>
+        <Banner t={t} />
+        <VehiclesSearch t={t} />
+        <Steps t={t} />
+        <WhyUs t={t} />
+        <CustomerReviews t={t} />
+        <Contact t={t} />
+      </main>
+    </TranslationsProvider>
   );
 }

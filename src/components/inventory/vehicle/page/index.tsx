@@ -7,6 +7,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Details from "../../carsCard/details";
 import Carousel from "../../carousel";
 import Input from "@/components/custom/input";
+import { useTranslation } from "react-i18next";
 
 type FormData = {
   firstName: string;
@@ -17,6 +18,7 @@ type FormData = {
 };
 
 const Page = ({ vin }: { vin: string }) => {
+  const { t } = useTranslation();
   const { inventory, setMessage, setShowMessage } =
     useContext(InventoryContext);
   const [vehicle, setVehicle] = useState<InventoryItem | null>(null);
@@ -227,26 +229,30 @@ const Page = ({ vin }: { vin: string }) => {
             ) : (
               <div className="flex flex-col gap-10">
                 {vehicle?.MAKE && (
-                  <Details title="title" value={vehicle?.MAKE} isPage />
+                  <Details title={t("make")} value={vehicle?.MAKE} isPage />
                 )}
                 {vehicle?.MODEL && (
-                  <Details title="title" value={vehicle?.MODEL} isPage />
+                  <Details title={t("model")} value={vehicle?.MODEL} isPage />
                 )}
 
                 {vehicle?.YEAR && (
-                  <Details title="title" value={vehicle?.YEAR} isPage />
+                  <Details title={t("year")} value={vehicle?.YEAR} isPage />
                 )}
                 {vehicle?.TRIM && (
-                  <Details title="title" value={vehicle?.TRIM} isPage />
+                  <Details title={t("trim")} value={vehicle?.TRIM} isPage />
                 )}
                 {vehicle?.DRIVETYPE && (
-                  <Details title="title" value={vehicle?.DRIVETYPE} isPage />
+                  <Details
+                    title={t("driveType")}
+                    value={vehicle?.DRIVETYPE}
+                    isPage
+                  />
                 )}
                 {vehicle?.TRANSMISSIONTYPE &&
                   vehicle?.TRANSMISSIONTYPE.toLowerCase() !==
                     "transmission type" && (
                     <Details
-                      title="title"
+                      title={t("transmissionType")}
                       value={vehicle?.TRANSMISSIONTYPE}
                       isPage
                     />
@@ -254,7 +260,7 @@ const Page = ({ vin }: { vin: string }) => {
                 {vehicle?.ODOMETER &&
                   vehicle?.ODOMETER.toLowerCase() !== "odometer" && (
                     <Details
-                      title={"title"}
+                      title={t("odometer")}
                       value={`${parseInt(vehicle?.ODOMETER).toLocaleString(
                         "en-US"
                       )} kms`}
@@ -262,13 +268,17 @@ const Page = ({ vin }: { vin: string }) => {
                     />
                   )}
                 {vehicle?.EXTCOLOUR && (
-                  <Details title="title" value={vehicle?.EXTCOLOUR} isPage />
+                  <Details
+                    title={t("exteriorColor")}
+                    value={vehicle?.EXTCOLOUR}
+                    isPage
+                  />
                 )}
               </div>
             )}
           </div>
           <div className="flex flex-col gap-10">
-            <h5 className="font-medium text-22">contact</h5>
+            <h5 className="font-medium text-22">{t("contactUs")}</h5>
             <form onSubmit={handleSubmit}>
               <div className="flex flex-row gap-10">
                 <Input
@@ -326,11 +336,10 @@ const Page = ({ vin }: { vin: string }) => {
                   required
                 />
                 <input
-                  placeholder={"Last Name"}
                   className={`bg-main py-10 w-full rounded-full text-white cursor-pointer uppercase ${
                     isLoadingForm && "opacity-50"
                   }`}
-                  value={"submit"}
+                  value={t("buttons:submit")}
                   type="submit"
                   disabled={isLoadingForm}
                 />
@@ -343,7 +352,7 @@ const Page = ({ vin }: { vin: string }) => {
       <div className="pt-50 px-mobile md:px-tablet lg:px-desktop">
         {!isLoading && vehicle?.OPTIONS && (
           <>
-            <h5 className="mb-10 font-medium text-22">Options</h5>
+            <h5 className="mb-10 font-medium text-22">{t("options")}</h5>
             <div className="flex flex-row flex-wrap gap-10">
               {vehicle?.OPTIONS.split(";").map((option, index) => (
                 <span

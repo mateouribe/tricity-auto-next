@@ -3,6 +3,7 @@ import Contact from "@/components/contact";
 import CustomerReviews from "@/components/customerReviews";
 import { Metadata } from "next";
 import React from "react";
+import initTranslations from "@/app/i18n";
 
 export const metadata: Metadata = {
   title: "About Tricity Auto Finance - Waterloo, ON Dealership",
@@ -19,12 +20,24 @@ export const metadata: Metadata = {
   },
 };
 
-const About = () => {
+const About = async ({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) => {
+  const { t } = await initTranslations(locale, [
+    "about",
+    "buttons",
+    "review",
+    "contact",
+    "whyUs",
+  ]);
+
   return (
     <main>
-      <Banner />
-      <CustomerReviews />
-      <Contact />
+      <Banner t={t} />
+      <CustomerReviews t={t} />
+      <Contact t={t} />
     </main>
   );
 };

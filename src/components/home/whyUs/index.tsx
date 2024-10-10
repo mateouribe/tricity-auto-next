@@ -1,50 +1,27 @@
+/* eslint-disable @next/next/no-img-element */
+import { TranslationProps } from "@/types/i18nTypes";
 import SectionTitle from "@/components/global/sectionTitle";
 import WhyUsItem from "@/components/global/whyUsItem";
-import Image from "next/image";
+import Link from "next/link";
 
-const WhyUs = () => {
-  //   const { t } = useTranslation();
-  //   const container = useRef(null);
-
-  //   useLayoutEffect(() => {
-  //     const ctx = gsap.context(() => {
-  //       ScrollTrigger.create({
-  //         trigger: container.current,
-  //         start: "top 115%",
-  //         end: "bottom 115%",
-  //         animation: gsap.fromTo(
-  //           ".divider",
-  //           {
-  //             y: 30,
-  //             opacity: 0,
-  //           },
-  //           {
-  //             y: 0,
-  //             opacity: 1,
-  //             duration: 1,
-  //             ease: "power4.inOut",
-  //           }
-  //         ),
-  //       });
-  //     }, container);
-
-  //     return () => ctx.revert();
-  //   }, []);
-
+const WhyUs = ({ t }: TranslationProps) => {
   return (
     <section className="w-full">
       {/* Divider */}
-      <div className="relative z-[1] w-full px-40 md:px-tablet lg:px-desktop -mb-[100px] cursor-pointer divider">
-        <div className="relative grid items-center justify-center w-full grid-cols-1 px-20 md:grid-cols-2 lg:grid-cols-3 py-60 lg:px-50 bg-main rounded-20">
+      <div className="relative z-[1] w-full px-40 md:px-tablet lg:px-desktop -mb-[100px] divider">
+        <Link
+          className="cursor-pointer relative grid items-center justify-center w-full grid-cols-1 px-20 md:grid-cols-2 lg:grid-cols-3 py-60 lg:px-50 bg-main rounded-20 hover:-translate-y-10 hover:shadow-sm transition-transform duration-500 ease-out group"
+          href="/financing"
+        >
           {/* DESKTOP & MOBILE*/}
           <div className="flex items-start justify-center w-full">
-            <h4 className="w-full md:w-[90%] font-medium text-white text-30 md:text-[35px] leading-none">
-              title
-            </h4>
+            <h2 className="w-full md:w-[90%] font-medium text-white text-30 md:text-[35px] leading-none">
+              {t("whyChooseTricity.divider.title")}
+            </h2>
           </div>
 
           {/* DESKTOP */}
-          <div className="items-center justify-center hidden w-full lg:flex">
+          <div className="items-center justify-center hidden w-full lg:flex group-hover:rotate-12 transition-transform duration-500 ease-out">
             <svg
               width="88"
               height="88"
@@ -60,7 +37,9 @@ const WhyUs = () => {
             </svg>
           </div>
           <div className="flex-col items-end justify-center hidden gap-5 lg:flex">
-            <span className="text-white">divider</span>
+            <span className="text-white">
+              {t("whyChooseTricity.divider.subtitle")}
+            </span>
             <span className="font-medium text-white text-20 md:text-26">
               (519) 576-3421
             </span>
@@ -69,23 +48,28 @@ const WhyUs = () => {
           {/* MOBILE */}
           <div className="flex flex-col items-end justify-center lg:hidden">
             <div className="flex flex-col items-end justify-center gap-5">
-              <span className="text-white">divider tit</span>
+              <h2 className="text-white">
+                {t("whyChooseTricity.divider.title")}
+              </h2>
               <span className="font-medium text-white text-20 md:text-26">
                 (519) 576-3421
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Why Choose Tricity */}
       <section className="flex flex-col items-stretch w-full h-auto md:flex-row bg-lightOrange gap-50">
         <div className="w-full h-full pt-[150px] pb-100 md:w-[60%] lg:w-1/2 p-mobile md:pl-tablet md:pr-0 lg:pl-desktop lg:pr-0">
-          <SectionTitle title={"title"} content={"content"} />
+          <SectionTitle
+            title={t("whyChooseTricity.title")}
+            content={t("whyChooseTricity.content")}
+          />
           <div className="flex flex-col gap-20 mt-30">
             <WhyUsItem
-              title="title"
-              content="content"
+              title={t("whyUs:oneTitle")}
+              content={t("whyUs:oneDescription")}
               icon={
                 <svg
                   width="70"
@@ -103,8 +87,8 @@ const WhyUs = () => {
               }
             />
             <WhyUsItem
-              title="title"
-              content="content"
+              title={t("whyUs:twoTitle")}
+              content={t("whyUs:twoDescription")}
               icon={
                 <svg
                   width="70"
@@ -122,8 +106,8 @@ const WhyUs = () => {
               }
             />
             <WhyUsItem
-              title="title"
-              content="content"
+              title={t("whyUs:threeTitle")}
+              content={t("whyUs:threeDescription")}
               icon={
                 <svg
                   width="70"
@@ -141,8 +125,8 @@ const WhyUs = () => {
               }
             />
             <WhyUsItem
-              title="title"
-              content="content"
+              title={t("whyUs:fourTitle")}
+              content={t("whyUs:fourDescription")}
               icon={
                 <svg
                   width="70"
@@ -164,7 +148,7 @@ const WhyUs = () => {
 
         {/* Image */}
         <div className="w-full md:w-[40%] lg:w-1/2 h-auto flex items-stretch">
-          <Image
+          <img
             className="w-full h-full bg-contain"
             src={"/assets/images/why-us-image.webp"}
             alt="Interior photography of Tricity Auto installations, a used cars dealership in Waterloo, ON"

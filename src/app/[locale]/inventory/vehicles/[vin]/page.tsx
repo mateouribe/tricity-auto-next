@@ -1,3 +1,5 @@
+import initTranslations from "@/app/i18n";
+import TranslationsProvider from "@/components/global/translationsProvider";
 import Page from "@/components/inventory/vehicle/page";
 import { Metadata } from "next";
 
@@ -15,8 +17,24 @@ export const metadata: Metadata = {
   },
 };
 
-const VehiclePage = ({ params: { vin } }: { params: { vin: string } }) => {
-  return <Page vin={vin} />;
+const namespaces = ["carDetails", "buttons"];
+
+const VehiclePage = async ({
+  params: { vin, locale },
+}: {
+  params: { vin: string; locale: string };
+}) => {
+  const { t, resources } = await initTranslations(locale, namespaces);
+
+  return (
+    <TranslationsProvider
+      locale={locale}
+      resources={resources}
+      namespaces={namespaces}
+    >
+      <Page vin={vin} />
+    </TranslationsProvider>
+  );
 };
 
 export default VehiclePage;

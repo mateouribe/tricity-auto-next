@@ -121,7 +121,7 @@ const Form = () => {
       <input
         value={"submit"}
         className={
-          "!w-[70%] !max-w-none mt-30 bg-main rounded-20 px-50 py-10 text-16 text-white font-medium flex items-center justify-center flex-row gap-15 min-w-fit cursor-pointer disabled:opacity-50 uppercase"
+          "!w-[70%] !max-w-none mt-30 bg-main rounded-20 px-50 py-10 text-16 text-white font-medium flex items-center justify-center flex-row gap-15 min-w-fit cursor-pointer disabled:opacity-50 uppercase hover:bg-main/80 transition-all duration-200"
         }
         disabled={isLoading}
         type="submit"

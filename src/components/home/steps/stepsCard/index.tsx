@@ -92,7 +92,7 @@ const StepsCard = ({
           className={`overflow-hidden w-full md:w-[70%] p-40 flex flex-col justify-between rounded-20 bg-[#fff] shadow-sm relative ${className} min-h-[350px] md:min-h-[400px] gap-[70px] stepCard-${stepNumber} `}
         >
           <div className="flex flex-col gap-20 relative z-[2]">
-            <p className="font-medium text-22 md:text-30">{title}</p>
+            <h3 className="font-medium text-22 md:text-30">{title}</h3>
             <p className="text-16 text-grayMouse w-full md:w-[80%]">
               {content}
             </p>

@@ -40,8 +40,8 @@ const Footer = () => {
           src={"/assets/images/logo.svg"}
           className="relative h-[100px]"
           alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
-          width={130}
-          height={130}
+          width={200}
+          height={50}
           priority={false}
         />
         <div className="flex flex-row gap-20 ">

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Controller } from "swiper/modules";
@@ -8,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 import SwiperCore from "swiper";
+import Image from "next/image";
 
 type Props = {
   images: string[];
@@ -43,10 +43,13 @@ const Carousel = ({ images }: Props) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img
+            <Image
               src={image}
               alt={`Slide ${index}`}
               className="w-full min-h-[70vh] max-h-[70vh] object-cover rounded-10 lg:rounded-l-none select-none cursor-grab"
+              layout="responsive"
+              width={1920}
+              height={1080}
             />
           </SwiperSlide>
         ))}
@@ -66,13 +69,15 @@ const Carousel = ({ images }: Props) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img
+              <Image
                 src={image}
                 alt={`Thumbnail ${index}`}
                 className={`w-[100px] h-[80px] object-cover rounded-[5px] border select-none cursor-pointer ${
                   activeIndex === index ? "border-[1px] !border-main" : ""
                 }`}
-                onClick={() => handleThumbnailClick(index)} // Set clicked thumbnail as the main image
+                onClick={() => handleThumbnailClick(index)}
+                width={100}
+                height={80}
               />
             </SwiperSlide>
           ))}

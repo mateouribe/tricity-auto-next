@@ -6,10 +6,11 @@ import SelectList from "@/components/custom/SelectList";
 import FormWrapper from "../formWrapper";
 import { useContext, useState } from "react";
 import { InventoryContext } from "@/context/InventoryContext";
+import { useTranslation } from "react-i18next";
 
 const Form = () => {
+  const { t } = useTranslation();
   const { setMessage, setShowMessage } = useContext(InventoryContext);
-  //   const container = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -53,7 +54,7 @@ const Form = () => {
 
     try {
       const response = await fetch(
-        "https://www.tricityautofinance.com/api/send-financing-email",
+        "http://localhost:3000/api/email/financing",
         {
           method: "POST",
           headers: {
@@ -135,7 +136,7 @@ const Form = () => {
       <div className="flex flex-col w-full lg:flex-row gap-30">
         <FormWrapper className="w-full lg:w-[60%] gap-30 flex flex-col justify-between">
           <div className="flex flex-col w-full gap-20">
-            <FormHeading text="heading" />
+            <FormHeading text={t("personalInfo")} />
             <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
               <Input
                 type="text"
@@ -221,7 +222,7 @@ const Form = () => {
           </div>
 
           <div className="flex flex-col w-full gap-20">
-            <FormHeading text="heading" />
+            <FormHeading text={t("residentialInfo")} />
             <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2">
               <Input
                 type="text"
@@ -292,7 +293,7 @@ const Form = () => {
         <div className="w-full lg:w-[40%] flex flex-col gap-30">
           <FormWrapper>
             <div className="flex flex-col w-full gap-20">
-              <FormHeading text={"heading"} />
+              <FormHeading text={t("employmentInfo")} />
               <div className="grid grid-cols-1 gap-20">
                 <Input
                   type="text"
@@ -341,7 +342,7 @@ const Form = () => {
           </FormWrapper>
           <FormWrapper className={"h-full"}>
             <div className="flex flex-col w-full gap-20">
-              <FormHeading text="heading" />
+              <FormHeading text={t("commentsAndCertifications")} />
               <Input
                 className={"h-full"}
                 placeholder={"Comments, References or Additional Information"}
@@ -357,12 +358,12 @@ const Form = () => {
       </div>
 
       <div className="flex flex-col gap-20">
-        <Checkbox name={"agreeTerms"}>check</Checkbox>
-        <Checkbox name={"agreeConsent"}>check</Checkbox>
+        <Checkbox name={"agreeTerms"}>{t("termsAndConsentOne")}</Checkbox>
+        <Checkbox name={"agreeConsent"}>{t("termsAndConsentTwo")}</Checkbox>
       </div>
 
       <input
-        value={"submit"}
+        value={t("buttons:submit")}
         className={
           "!w-[70%] !max-w-fit mt-30 bg-main rounded-20 px-50 py-10 text-16 text-white font-medium flex items-center justify-center flex-row gap-15 min-w-fit cursor-pointer disabled:opacity-50 uppercase"
         }

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-black;
+  @apply leading-tight;
+  @apply font-outfit;
+}
+
+img {
+  user-select: none !important;
+}
+
+section {
+  @apply bg-white;
+}
+
+@layer base {
+  /* Thin */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-Thin.woff") format("woff2"),
+      url("/assets/fonts/Outfit-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  /* Light */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-Light.woff2") format("woff2"),
+      url("/assets/fonts/Outfit-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  /* Regular */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-Regular.woff2") format("woff2"),
+      url("/assets/fonts/Outfit-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Medium */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-Medium.woff2") format("woff2"),
+      url("/assets/fonts/Outfit-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-Black.woff2") format("woff2"),
+      url("/assets/fonts/Outfit-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* Extra Bold */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-ExtraBold.woff2") format("woff2"),
+      url("/assets/fonts/Outfit-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  /* Black */
+  @font-face {
+    font-family: "Outfit";
+    src: url("/assets/fonts/Outfit-Black.woff2") format("woff2"),
+      url("/assets/fonts/Outfit-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #faf8f6 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px !important;
+  border-radius: 50% !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #faf8f6 !important;
+  opacity: 0.8 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6347 !important;
+}
