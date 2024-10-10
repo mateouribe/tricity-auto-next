@@ -66,7 +66,7 @@ const Page = ({ vin }: { vin: string }) => {
 
       try {
         const response = await fetch(
-          "https://www.tricityautofinance.com/api/send-contact-email",
+          "https://www.tricityautofinance.com/api/email/contact",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

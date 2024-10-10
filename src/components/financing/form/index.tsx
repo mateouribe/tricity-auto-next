@@ -54,7 +54,7 @@ const Form = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/email/financing",
+        "https://www.tricityautofinance.com/api/email/financing",
         {
           method: "POST",
           headers: {
