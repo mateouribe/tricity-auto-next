@@ -6,6 +6,7 @@
     "dev": "i18nexus pull && next dev",
     "build": "i18nexus pull && next build",
     "start": "i18nexus pull && next start",
+    "heroku-postbuild": "next build",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "csv-parse": "^5.5.6",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.4.5",
+    "express": "^4.21.1",
     "i18next": "^23.15.2",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.14",

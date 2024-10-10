@@ -1,15 +1,32 @@
-import cron from "node-cron";
-import { downloadInventory } from "../services/ftpService";
+// cron/scheduler.js
+const cron = require("node-cron");
+const { getCSVFromFTP } = require("@/services/ftpService");
+const { parse } = require("csv-parse/sync");
 
-// Schedule a cron job to run at 3 AM every day
-export const inventoryCron = () => {
-  cron.schedule("0 3 * * *", async () => {
-    console.log("Running cron job at 3 AM: Downloading CSV file...");
-    try {
-      await downloadInventory();
-      console.log("CSV file successfully downloaded by cron job");
-    } catch (err) {
-      console.error("Cron job error:", err);
-    }
+async function fetchCSVAndProcess() {
+  const filePath = "/tricity_inventory.csv";
+
+  // Get CSV data from FTP
+  const csvData = await getCSVFromFTP(filePath);
+
+  if (!csvData) {
+    console.error("Failed to retrieve CSV data");
+    return;
+  }
+
+  // Parse CSV
+  const records = parse(csvData, {
+    columns: true,
+    skip_empty_lines: true,
   });
-};
+
+  console.log("Fetched and processed CSV data:", records);
+
+  // Here you can save the records to a database or log the output
+}
+
+// Schedule the task to run every day at 3 AM
+cron.schedule("0 3 * * *", () => {
+  console.log("Running Cron Job to fetch CSV at 3 AM");
+  fetchCSVAndProcess();
+});

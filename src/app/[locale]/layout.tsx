@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 //   inventoryCron();
 // }
 
-const namespaces = ["nav"];
+const namespaces = ["nav", "buttons", "footer"];
 
 export default async function RootLayout({
   children,

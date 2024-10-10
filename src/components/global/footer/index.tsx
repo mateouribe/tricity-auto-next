@@ -1,28 +1,8 @@
-/* eslint-disable react/prop-types */
-// import { useTranslation } from "react-i18next";
-
 import Image from "next/image";
-import Link from "next/link";
+import GroupInfo from "./groupInfo";
+import Navigation from "./navigation";
 
 const Footer = () => {
-  //   const { t } = useTranslation();
-
-  type Props = {
-    title: string;
-    children: React.ReactNode;
-  };
-
-  const GroupInfo = ({ title, children }: Props) => {
-    return (
-      <div className="flex flex-col gap-10">
-        <div className="relative">
-          <p className="font-medium text-white text-20">{title}</p>
-          <span className="w-50 h-[1px] bg-main absolute left-0 -bottom-[2px]"></span>
-        </div>
-        <ul>{children}</ul>
-      </div>
-    );
-  };
   return (
     <footer
       className="relative flex flex-col items-start justify-between gap-50 py-tablet px-mobile md:px-tablet lg:px-desktop"
@@ -66,7 +46,7 @@ const Footer = () => {
 
       {/* Links */}
       <div className="relative z-[1] flex flex-col md:flex-row gap-20 md:gap-50">
-        <GroupInfo title={"Contact"}>
+        <GroupInfo title={"contactInfo"}>
           <li className="text-[#999999] hover:text-[#777777] transition-all mb-15 text-[18]">
             <a
               href="https://www.google.com/maps/place/Tricity+Auto+-+Sales+%26+Financing/@43.4700289,-80.5145324,17z/data=!4m6!3m5!1s0x882bf3ac67ec2911:0x4254a142717eaf27!8m2!3d43.4700673!4d-80.5119782!16s%2Fg%2F11mv183klw?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
@@ -85,37 +65,7 @@ const Footer = () => {
             </a>
           </li>
         </GroupInfo>
-        <GroupInfo title={"Useful"}>
-          <li className="text-[#999999] mb-15 text-[18]">
-            <Link href={"/"} className=" hover:text-[#777777] transition-all ">
-              Hola
-            </Link>
-          </li>
-          <li className="text-[#999999]  mb-15 text-[18]">
-            <Link
-              href={"/financing"}
-              className=" hover:text-[#777777] transition-all "
-            >
-              Hola
-            </Link>
-          </li>
-          <li className="text-[#999999]  mb-15 text-[18]">
-            <Link
-              href={"/inventory"}
-              className=" hover:text-[#777777] transition-all "
-            >
-              Hola
-            </Link>
-          </li>
-          <li className="text-[#999999]  mb-15 text-[18]">
-            <Link
-              href={"/about"}
-              className=" hover:text-[#777777] transition-all "
-            >
-              Hola
-            </Link>
-          </li>
-        </GroupInfo>
+        <Navigation />
       </div>
 
       {/* Copy Right */}
