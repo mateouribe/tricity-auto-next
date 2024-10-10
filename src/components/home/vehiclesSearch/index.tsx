@@ -4,7 +4,6 @@ import Input from "../../custom/input";
 import MakeSelectList from "../../inventory/makeSelectList";
 import VehiclesQuantity from "../../inventory/vehiclesQuantity";
 import VehiclesCards from "../../inventory/vehiclesCards";
-
 const VehiclesSearch = ({ t }: TranslationProps) => {
   return (
     <section className="relative py-desktop bg-main">

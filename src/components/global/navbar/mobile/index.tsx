@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
 import React, { useLayoutEffect, useRef, useState } from "react";
@@ -150,7 +151,6 @@ const Mobile = (props: Props) => {
           src={"/assets/images/logo.svg"}
           alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
           className="w-[134px] blacklogo bg-white rounded-full p-10"
-          loading="lazy"
         />
       </Link>
       <div

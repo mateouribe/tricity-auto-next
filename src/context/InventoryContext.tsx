@@ -80,7 +80,12 @@ export const InventoryProvider = ({ children }: InventoryProviderProps) => {
 
   useEffect(() => {
     if (inventory && inventory.length > 0) {
-      setMakes(["All", ...new Set(inventory.map((car) => car.MAKE))]); // Set makes based on inventory data
+      setMakes([
+        "All",
+        ...new Set(
+          inventory.map((car) => car.MAKE).filter((make) => make !== null)
+        ),
+      ]);
     }
   }, [inventory]);
 

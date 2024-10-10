@@ -1,10 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Button from "../../../custom/button";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/all";
-// gsap.registerPlugin(ScrollTrigger);
-
 type Props = {
   title: string;
   content: string;
