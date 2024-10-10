@@ -3,8 +3,6 @@ import SectionTitle from "@/components/global/sectionTitle";
 import StepsCard from "./stepsCard";
 
 const Steps = ({ t }: TranslationProps) => {
-  //   const { t } = useTranslation();
-
   return (
     <section className="pt-100 p-mobile md:px-tablet lg:p-desktop ">
       <SectionTitle title={t("steps.title")} />

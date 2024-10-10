@@ -24,7 +24,7 @@ const VehiclePage = async ({
 }: {
   params: { vin: string; locale: string };
 }) => {
-  const { t, resources } = await initTranslations(locale, namespaces);
+  const { resources } = await initTranslations(locale, namespaces);
 
   return (
     <TranslationsProvider
