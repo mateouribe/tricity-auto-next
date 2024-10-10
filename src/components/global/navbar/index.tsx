@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../../custom/button";
-import LanguageSelector from "./languageSelector";
 import Mobile from "./mobile";
 import UnorganizedList from "./unorganizedList";
 
@@ -15,7 +13,6 @@ const Navbar = () => {
           <Link href={"/"}>
             <Image
               className="w-auto bg-contain cursor-pointer h-100"
-              //     src={logo}
               alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
               loading="lazy"
               src={"/assets/images/logo.svg"}

@@ -7,9 +7,7 @@ import gsap, { Expo } from "gsap";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "../languageSelector";
 
-type Props = {};
-
-const Mobile = (props: Props) => {
+const Mobile = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const container = useRef(null);

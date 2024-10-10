@@ -26,7 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   locale: string;
 }>) {
-  const { t, resources } = await initTranslations(locale, namespaces);
+  const { resources } = await initTranslations(locale, namespaces);
 
   return (
     <html lang="en">

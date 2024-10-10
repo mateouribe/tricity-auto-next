@@ -1,5 +1,3 @@
-// src/app/api/sendFinancingEmail/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import { emailService } from "@/services/emailService";
 
@@ -57,11 +55,14 @@ export async function POST(req: NextRequest) {
 
     // Send success response
     return NextResponse.json({ message: "Email sent successfully" });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Error sending financing email:", error);
-    // Send error response
+
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown error";
+
     return NextResponse.json(
-      { message: "Error sending financing email", error: error.message },
+      { message: "Error sending financing email", error: errorMessage },
       { status: 500 }
     );
   }
