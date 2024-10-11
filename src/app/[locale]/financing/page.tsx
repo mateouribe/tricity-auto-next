@@ -5,13 +5,13 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/global/translationsProvider";
 
 export const metadata: Metadata = {
-  title: "Used Cars Dealership in Waterloo - Tricity Auto",
+  title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
   description:
-    "Tricity Auto provides flexible car loans in Waterloo with guaranteed approvals and a 0% turn-down policy. Get fast approval and the best rates tailored to your budget.",
+    "Tricity Auto provides flexible car loans in Waterloo, ON with guaranteed approvals and a 0% turn-down policy. Get fast approval and the best rates tailored to your budget.",
   openGraph: {
-    title: "Used Cars Dealership in Waterloo - Tricity Auto",
+    title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
     description:
-      "Tricity Auto provides flexible car loans in Waterloo with guaranteed approvals and a 0% turn-down policy. Get fast approval and the best rates tailored to your budget.",
+      "Tricity Auto provides flexible car loans in Waterloo, ON with guaranteed approvals and a 0% turn-down policy. Get fast approval and the best rates tailored to your budget.",
     url: "https://tricityautofinance.com/financing",
     siteName: "Tricity Auto - Waterloo, ON Used Car Dealership",
     locale: "en_US",

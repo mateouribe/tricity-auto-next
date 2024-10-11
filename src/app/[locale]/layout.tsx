@@ -30,6 +30,17 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>Used Cars Dealership in Waterloo, ON - Tricity Auto</title>
+        <meta
+          name="description"
+          content="Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today."
+        />
+        <meta
+          name="keywords"
+          content="vehicle financing, car loans, used cars, auto loans, tricity area, buy here pay here, used car dealership, Ontario car finance, bad credit auto loans, no credit car loans, vehicle search, credit rebuilding, special financing programs, bankruptcy car loans, car inventory, SUVs, sedans, minivans, Ontario used vehicles"
+        />
+      </head>
       <body>
         <InventoryProvider>
           <TranslationsProvider

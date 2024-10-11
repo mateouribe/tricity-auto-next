@@ -16,9 +16,17 @@ const Banner = ({ t }: TranslationProps) => {
         //    ref={container}
       >
         <div className="flex flex-col w-full gap-60">
-          <h1 className="text-center md:text-left text-36 md:text-48 lg:text-[70px] leading-none font-medium text-white title">
-            {t("welcomeMessage")}
+          <h1
+            className="!p-0 !size-[1px] !-m-[1px] !overflow-hidden !abolsute !whitespace-nowrap"
+            style={{
+              clip: "rect(0, 0, 0, 0) !important",
+            }}
+          >
+            Used Cars Dealership in Waterloo, ON - Tricity Auto
           </h1>
+          <h2 className="text-center md:text-left text-36 md:text-48 lg:text-[70px] leading-none font-medium text-white title">
+            {t("welcomeMessage")}
+          </h2>
           <p className="w-full text-center text-white text-16 my-50 lg:w-1/2 md:text-left subtitle">
             {t("mission")}
           </p>

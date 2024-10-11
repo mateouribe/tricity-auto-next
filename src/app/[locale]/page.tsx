@@ -9,11 +9,11 @@ import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/global/translationsProvider";
 
 export const metadata: Metadata = {
-  title: "Used Cars Dealership in Waterloo - Tricity Auto",
+  title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
   description:
     "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today.",
   openGraph: {
-    title: "Used Cars Dealership in Waterloo - Tricity Auto",
+    title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
     description:
       "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today.",
     url: "https://tricityautofinance.com/",
