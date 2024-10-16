@@ -4,11 +4,11 @@ import Page from "@/components/inventory/page";
 import initTranslations from "@/app/i18n";
 
 export const metadata: Metadata = {
-  title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
+  title: "Used Cars Inventory in Waterloo, ON - Tricity Auto",
   description:
     "Explore Tricity Auto's wide range of used cars, from SUVs to sedans. Get easy financing, fast approvals, and find your perfect vehicle in Waterloo, ON today.",
   openGraph: {
-    title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
+    title: "Used Cars Inventory in Waterloo, ON - Tricity Auto",
     description:
       "Explore Tricity Auto's wide range of used cars, from SUVs to sedans. Get easy financing, fast approvals, and find your perfect vehicle in Waterloo, ON today.",
     url: "https://tricityautofinance.com/inventory",

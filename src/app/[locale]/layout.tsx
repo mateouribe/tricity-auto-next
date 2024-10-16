@@ -6,16 +6,18 @@ import Alert from "@/components/global/alert";
 import { InventoryProvider } from "../../context/InventoryContext";
 import TranslationsProvider from "@/components/global/translationsProvider";
 import initTranslations from "../i18n";
+import { downloadInventory } from "@/services/ftpService";
+
+(async () => {
+  console.log("Initial inventory download on server startup.");
+  await downloadInventory();
+})();
 
 export const metadata: Metadata = {
   title: "Tricity Auto Finance - Waterloo, ON Used Car Dealership",
   description:
     "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today.",
 };
-
-// if (typeof window === "undefined") {
-//   inventoryCron();
-// }
 
 const namespaces = ["nav", "buttons", "footer"];
 

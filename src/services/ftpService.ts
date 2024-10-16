@@ -1,28 +1,25 @@
-// src/services/ftpService.ts
 import { Client } from "basic-ftp";
-import { StringWriter } from "@/utils/stringWriter";
+import path from "path";
 import ftpConfig from "@/config/ftpConfig";
 
-export async function getCSVFromFTP(filePath: string): Promise<string | null> {
+export async function downloadInventory(): Promise<void> {
   const client = new Client();
-  client.ftp.verbose = true; // Enable verbose logging
-
-  const writer = new StringWriter(); // Writable stream to capture the CSV data
+  client.ftp.verbose = true;
 
   try {
     console.log(`Connecting to FTP server at ${ftpConfig.host}...`);
     await client.access(ftpConfig);
-    console.log(`Connected to FTP server.`);
 
-    console.log(`Downloading file: ${filePath}`);
-    await client.downloadTo(writer, filePath); // Download directly to the custom stream
+    console.log("Connected to FTP server.");
 
-    const csvData = writer.getData();
-    return csvData;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (err: any) {
-    console.error("Error fetching the file from FTP:", err.message);
-    return null;
+    const filePath = path.join(process.cwd(), "public/data/inventory.csv");
+
+    console.log(`Downloading file to: ${filePath}`);
+    await client.downloadTo(filePath, "/tricity_inventory.csv");
+
+    console.log("Downloaded inventory.csv successfully.");
+  } catch (error) {
+    console.error("Error downloading inventory:", error);
   } finally {
     client.close();
   }
