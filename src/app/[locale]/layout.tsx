@@ -7,6 +7,7 @@ import { InventoryProvider } from "../../context/InventoryContext";
 import TranslationsProvider from "@/components/global/translationsProvider";
 import initTranslations from "../i18n";
 import { downloadInventory } from "@/services/ftpService";
+import Google from "@/components/global/google";
 
 (async () => {
   console.log("Initial inventory download on server startup.");
@@ -43,6 +44,7 @@ export default async function RootLayout({
           content="vehicle financing, car loans, used cars, auto loans, tricity area, buy here pay here, used car dealership, Ontario car finance, bad credit auto loans, no credit car loans, vehicle search, credit rebuilding, special financing programs, bankruptcy car loans, car inventory, SUVs, sedans, minivans, Ontario used vehicles"
         />
       </head>
+      <Google />
       <body>
         <InventoryProvider>
           <TranslationsProvider

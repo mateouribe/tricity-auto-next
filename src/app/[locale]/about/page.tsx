@@ -4,6 +4,7 @@ import CustomerReviews from "@/components/customerReviews";
 import { Metadata } from "next";
 import React from "react";
 import initTranslations from "@/app/i18n";
+import Google from "@/components/global/google";
 
 export const metadata: Metadata = {
   title: "Vehicle Financing Solutions in Waterloo, ON - Tricity Auto",
@@ -59,11 +60,14 @@ const About = async ({
   ]);
 
   return (
-    <main>
-      <Banner t={t} />
-      <CustomerReviews t={t} />
-      <Contact t={t} />
-    </main>
+    <>
+      <Google />
+      <main>
+        <Banner t={t} />
+        <CustomerReviews t={t} />
+        <Contact t={t} />
+      </main>
+    </>
   );
 };
 

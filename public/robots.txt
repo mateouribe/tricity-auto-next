@@ -6,4 +6,4 @@ Allow: /favicon.ico     # Explicitly allow favicon
 Allow: /               # Allow everything else (e.g. homepage and other public pages)
 
 # Link to your XML sitemap
-Sitemap: https://tricityautofinance.com/sitemap.xml
+Sitemap: https://www.tricityautofinance.com/sitemap.xml
