@@ -6,17 +6,42 @@ import React from "react";
 import initTranslations from "@/app/i18n";
 
 export const metadata: Metadata = {
-  title: "About Tricity Auto Finance - Waterloo, ON Dealership",
+  title: "Vehicle Financing Solutions in Waterloo, ON - Tricity Auto",
   description:
-    "Learn more about Tricity Auto, a leading used car dealership in Waterloo, ON dedicated to helping customers rebuild credit and drive home in reliable vehicles.",
+    "With over 12 years of experience, Tricity Auto specializes in vehicle financing solutions, including bad credit car loans and preferred-rate financing. Apply online today!",
+  keywords: [
+    "vehicle financing Waterloo",
+    "bad credit car loans",
+    "car loans Ontario",
+    "Buy Here Pay Here Waterloo",
+    "online credit application",
+    "used car financing Ontario",
+  ],
   openGraph: {
-    title: "About Tricity Auto Finance - Waterloo, ON Dealership",
-    description:
-      "Learn more about Tricity Auto, a leading used car dealership in Waterloo, ON dedicated to helping customers rebuild credit and drive home in reliable vehicles.",
-    url: "https://tricityautofinance.com/about",
-    siteName: "Tricity Auto - Waterloo, ON Used Car Dealership",
-    locale: "en_US",
     type: "website",
+    url: "https://www.tricityauto.com/about",
+    title: "Vehicle Financing Solutions in Waterloo, ON | Tricity Auto",
+    description:
+      "Tricity Auto offers over a decade of experience in automotive financing. Whether you have bad credit or prefer low-interest rates, our online credit application makes approvals easy.",
+    images: [
+      {
+        url: "https://www.tricityauto.com/assets/images/about-us-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Customer discussing car financing with dealer at Tricity Auto, Waterloo, ON",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vehicle Financing Solutions in Waterloo | Tricity Auto",
+    description:
+      "Get financing solutions for all credit types at Tricity Auto. Apply for car loans online with guaranteed approval!",
+    images: ["https://www.tricityauto.com/assets/images/about-us-image.webp"],
+  },
+  metadataBase: new URL("https://www.tricityauto.com"),
+  alternates: {
+    canonical: "https://www.tricityauto.com/about",
   },
 };
 

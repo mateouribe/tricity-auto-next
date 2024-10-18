@@ -15,7 +15,7 @@ export async function downloadInventory(): Promise<void> {
     const filePath = path.join(process.cwd(), "public/data/inventory.csv");
 
     console.log(`Downloading file to: ${filePath}`);
-    await client.downloadTo(filePath, "/tricity_inventory.csv");
+    await client.downloadTo(filePath, "/filtered_cars_data.csv");
 
     console.log("Downloaded inventory.csv successfully.");
   } catch (error) {

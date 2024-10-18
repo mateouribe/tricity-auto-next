@@ -9,17 +9,34 @@ import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/global/translationsProvider";
 
 export const metadata: Metadata = {
-  title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
+  title: "Used Car Dealership in Waterloo, Ontario - Tricity Auto",
   description:
-    "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today.",
+    "Explore Tricity Auto, the top used car dealership in Waterloo, ON. We offer competitive financing solutions for all credit types and a wide selection of pre-owned cars, SUVs, and trucks. Drive away today with confidence!",
   openGraph: {
-    title: "Used Cars Dealership in Waterloo, ON - Tricity Auto",
-    description:
-      "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today.",
-    url: "https://tricityautofinance.com/",
-    siteName: "Tricity Auto - Waterloo, ON Used Car Dealership",
-    locale: "en_US",
     type: "website",
+    url: "https://www.tricityauto.com",
+    title: "Tricity Auto - Used Car Dealership in Waterloo, Ontario",
+    description:
+      "Looking for used cars in Waterloo, ON? Tricity Auto offers financing solutions for every budget. Apply today and explore our inventory of quality pre-owned vehicles.",
+    images: [
+      {
+        url: "https://www.tricityauto.com/assets/images/home-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Tricity Auto used car dealership in Waterloo, Ontario - Competitive Financing Available",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tricity Auto - Used Car Dealership in Waterloo, Ontario",
+    description:
+      "Find affordable used cars and competitive financing at Tricity Auto. Serving Waterloo, Ontario, and beyond. Apply today!",
+    images: ["https://www.tricityauto.com/assets/images/home-banner.webp"],
+  },
+  metadataBase: new URL("https://www.tricityauto.com"),
+  alternates: {
+    canonical: "https://www.tricityauto.com",
   },
 };
 
