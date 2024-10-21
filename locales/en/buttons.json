@@ -1,1 +1,10 @@
-{"applyNow":"Apply Now","buyNow":"Buy Now","contactUs":"Contact Us","requestCarLoan":"Request your vehicle loan","search":"Search","submit":"Submit","viewDetails":"View Details","viewInventory":"View Inventory"}
+{
+  "applyNow": "Apply Now",
+  "buyNow": "Buy Now",
+  "contactUs": "Contact Us",
+  "requestCarLoan": "Request your car loan",
+  "search": "Search",
+  "submit": "Submit",
+  "viewDetails": "View Details",
+  "viewInventory": "View Inventory"
+}

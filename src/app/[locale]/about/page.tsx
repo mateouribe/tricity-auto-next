@@ -7,11 +7,11 @@ import initTranslations from "@/app/i18n";
 import Google from "@/components/global/google";
 
 export const metadata: Metadata = {
-  title: "Vehicle Financing Solutions in Waterloo, ON - Tricity Auto",
+  title: "Car Financing Solutions in Waterloo, ON - Tricity Auto",
   description:
-    "With over 12 years of experience, Tricity Auto specializes in vehicle financing solutions, including bad credit car loans and preferred-rate financing. Apply online today!",
+    "With over 12 years of experience, Tricity Auto specializes in car financing solutions, including bad credit car loans and preferred-rate financing. Apply online today!",
   keywords: [
-    "vehicle financing Waterloo",
+    "car financing Waterloo",
     "bad credit car loans",
     "car loans Ontario",
     "Buy Here Pay Here Waterloo",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.tricityauto.com/about",
-    title: "Vehicle Financing Solutions in Waterloo, ON | Tricity Auto",
+    title: "Car Financing Solutions in Waterloo, ON | Tricity Auto",
     description:
       "Tricity Auto offers over a decade of experience in automotive financing. Whether you have bad credit or prefer low-interest rates, our online credit application makes approvals easy.",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vehicle Financing Solutions in Waterloo | Tricity Auto",
+    title: "Car Financing Solutions in Waterloo | Tricity Auto",
     description:
       "Get financing solutions for all credit types at Tricity Auto. Apply for car loans online with guaranteed approval!",
     images: ["https://www.tricityauto.com/assets/images/about-us-image.webp"],
