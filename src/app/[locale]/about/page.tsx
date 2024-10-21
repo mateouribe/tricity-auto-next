@@ -9,9 +9,9 @@ import Google from "@/components/global/google";
 export const metadata: Metadata = {
   title: "Vehicle Financing Solutions in Waterloo, ON - Tricity Auto",
   description:
-    "With over 12 years of experience, Tricity Auto specializes in vehicle financing solutions, including bad credit car loans and preferred-rate financing. Apply online today!",
+    "With over 12 years of experience, Tricity Auto specializes in car financing solutions, including bad credit car loans and preferred-rate financing. Apply online today!",
   keywords: [
-    "vehicle financing Waterloo",
+    "car financing Waterloo",
     "bad credit car loans",
     "car loans Ontario",
     "Buy Here Pay Here Waterloo",

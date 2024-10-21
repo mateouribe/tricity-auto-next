@@ -21,7 +21,7 @@ const Page = ({ vin }: { vin: string }) => {
   const { t } = useTranslation();
   const { inventory, setMessage, setShowMessage } =
     useContext(InventoryContext);
-  const [vehicle, setVehicle] = useState<InventoryItem | null>(null);
+  const [car, setVehicle] = useState<InventoryItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
@@ -57,10 +57,10 @@ const Page = ({ vin }: { vin: string }) => {
     e.preventDefault();
     setIsLoadingForm(true);
 
-    if (vehicle) {
+    if (car) {
       const updatedMessage =
         formData.message +
-        `\n\nVehicle: ${vehicle?.YEAR} ${vehicle?.MAKE} ${vehicle?.MODEL} | ${vehicle?.TRIM}`;
+        `\n\nVehicle: ${car?.YEAR} ${car?.MAKE} ${car?.MODEL} | ${car?.TRIM}`;
 
       const updatedFormData = { ...formData, message: updatedMessage };
 
@@ -107,7 +107,7 @@ const Page = ({ vin }: { vin: string }) => {
     setIsLoadingForm(false);
   };
 
-  if (vehicle === null && !isLoading) {
+  if (car === null && !isLoading) {
     return (
       <section className="h-[100vh] w-full flex items-center justify-center">
         <h1 className="text-30 md:text-48 text-main">Vehicle not found</h1>
@@ -122,7 +122,7 @@ const Page = ({ vin }: { vin: string }) => {
           <Skeleton width={"60%"} height={50} />
         ) : (
           <SectionTitle
-            title={`${vehicle?.YEAR} ${vehicle?.MAKE} ${vehicle?.MODEL} | ${vehicle?.TRIM}`}
+            title={`${car?.YEAR} ${car?.MAKE} ${car?.MODEL} | ${car?.TRIM}`}
             containerClassName={"!mb-0 w-[65%]"}
             isH1
           />
@@ -132,12 +132,12 @@ const Page = ({ vin }: { vin: string }) => {
         ) : (
           <div className="flex flex-col items-start gap-5 md:items-end">
             <span className="font-medium leading-none text-30 md:text-48 text-main">
-              {vehicle?.LISTPRICE
-                ? `$${parseInt(vehicle?.LISTPRICE).toLocaleString()}`
+              {car?.LISTPRICE
+                ? `$${parseInt(car?.LISTPRICE).toLocaleString()}`
                 : "Contac us"}
             </span>
 
-            {vehicle?.LISTPRICE && (
+            {car?.LISTPRICE && (
               <span className="text-right text-grayMouse text-14">
                 Plus taxes
               </span>
@@ -212,8 +212,8 @@ const Page = ({ vin }: { vin: string }) => {
           ) : (
             <Carousel
               images={
-                vehicle?.PHOTOS
-                  ? vehicle?.PHOTOS.split(",")
+                car?.PHOTOS
+                  ? car?.PHOTOS.split(",")
                   : ["/assets/images/no-car-image.webp"]
               }
             />
@@ -228,49 +228,49 @@ const Page = ({ vin }: { vin: string }) => {
               <Skeleton width={"100%"} height={"40vh"} />
             ) : (
               <div className="flex flex-col gap-10">
-                {vehicle?.MAKE && (
-                  <Details title={t("make")} value={vehicle?.MAKE} isPage />
+                {car?.MAKE && (
+                  <Details title={t("make")} value={car?.MAKE} isPage />
                 )}
-                {vehicle?.MODEL && (
-                  <Details title={t("model")} value={vehicle?.MODEL} isPage />
+                {car?.MODEL && (
+                  <Details title={t("model")} value={car?.MODEL} isPage />
                 )}
 
-                {vehicle?.YEAR && (
-                  <Details title={t("year")} value={vehicle?.YEAR} isPage />
+                {car?.YEAR && (
+                  <Details title={t("year")} value={car?.YEAR} isPage />
                 )}
-                {vehicle?.TRIM && (
-                  <Details title={t("trim")} value={vehicle?.TRIM} isPage />
+                {car?.TRIM && (
+                  <Details title={t("trim")} value={car?.TRIM} isPage />
                 )}
-                {vehicle?.DRIVETYPE && (
+                {car?.DRIVETYPE && (
                   <Details
                     title={t("driveType")}
-                    value={vehicle?.DRIVETYPE}
+                    value={car?.DRIVETYPE}
                     isPage
                   />
                 )}
-                {vehicle?.TRANSMISSIONTYPE &&
-                  vehicle?.TRANSMISSIONTYPE.toLowerCase() !==
+                {car?.TRANSMISSIONTYPE &&
+                  car?.TRANSMISSIONTYPE.toLowerCase() !==
                     "transmission type" && (
                     <Details
                       title={t("transmissionType")}
-                      value={vehicle?.TRANSMISSIONTYPE}
+                      value={car?.TRANSMISSIONTYPE}
                       isPage
                     />
                   )}
-                {vehicle?.ODOMETER &&
-                  vehicle?.ODOMETER.toLowerCase() !== "odometer" && (
+                {car?.ODOMETER &&
+                  car?.ODOMETER.toLowerCase() !== "odometer" && (
                     <Details
                       title={t("odometer")}
-                      value={`${parseInt(vehicle?.ODOMETER).toLocaleString(
+                      value={`${parseInt(car?.ODOMETER).toLocaleString(
                         "en-US"
                       )} kms`}
                       isPage
                     />
                   )}
-                {vehicle?.EXTCOLOUR && (
+                {car?.EXTCOLOUR && (
                   <Details
                     title={t("exteriorColor")}
-                    value={vehicle?.EXTCOLOUR}
+                    value={car?.EXTCOLOUR}
                     isPage
                   />
                 )}
@@ -350,11 +350,11 @@ const Page = ({ vin }: { vin: string }) => {
       </div>
 
       <div className="pt-50 px-mobile md:px-tablet lg:px-desktop">
-        {!isLoading && vehicle?.OPTIONS && (
+        {!isLoading && car?.OPTIONS && (
           <>
             <h5 className="mb-10 font-medium text-22">{t("options")}</h5>
             <div className="flex flex-row flex-wrap gap-10">
-              {vehicle?.OPTIONS.split(";").map((option, index) => (
+              {car?.OPTIONS.split(";").map((option, index) => (
                 <span
                   className="px-10 py-5 cursor-default bg-[#F2F0EE] text-[#A6A5A4] rounded-full"
                   key={index}

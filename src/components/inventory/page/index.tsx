@@ -2,7 +2,7 @@
 
 import React, { SetStateAction, useContext, useEffect, useState } from "react";
 import { InventoryContext } from "@/context/InventoryContext";
-import VehiclesQuantity from "../vehiclesQuantity";
+import VehiclesQuantity from "../carsQuantity";
 import SelectList from "@/components/custom/SelectList";
 import Input from "@/components/custom/input";
 import CarsCard from "../carsCard";
@@ -40,9 +40,9 @@ const Page = () => {
 
         if (searchText) {
           filtered = filtered.filter((car) => {
-            const vehicleTitle =
+            const carTitle =
               `${car.YEAR} ${car.MAKE} ${car.MODEL} | ${car.TRIM}`.toLowerCase();
-            return vehicleTitle.includes(searchText);
+            return carTitle.includes(searchText);
           });
         }
 
@@ -87,7 +87,7 @@ const Page = () => {
           filteredInventory.map((car, index) => (
             <CarsCard
               key={index}
-              vehicle={{
+              car={{
                 title: `${car.YEAR} ${car.MAKE} ${car.MODEL} | ${car.TRIM}`,
                 year: car.YEAR ? car.YEAR : "N/A",
                 make: car.MAKE ? car.MAKE : "N/A",

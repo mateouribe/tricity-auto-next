@@ -17,7 +17,7 @@ import Google from "@/components/global/google";
 export const metadata: Metadata = {
   title: "Tricity Auto Finance - Waterloo, ON Used Car Dealership",
   description:
-    "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today.",
+    "Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next car with ease today.",
 };
 
 const namespaces = ["nav", "buttons", "footer"];
@@ -37,11 +37,11 @@ export default async function RootLayout({
         <title>Used Cars Dealership in Waterloo, ON - Tricity Auto</title>
         <meta
           name="description"
-          content="Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next vehicle with ease today."
+          content="Tricity Auto is Waterloo's trusted used car dealership offering guaranteed approvals, fast financing, and credit rebuilding. Secure your next car with ease today."
         />
         <meta
           name="keywords"
-          content="vehicle financing, car loans, used cars, auto loans, tricity area, buy here pay here, used car dealership, Ontario car finance, bad credit auto loans, no credit car loans, vehicle search, credit rebuilding, special financing programs, bankruptcy car loans, car inventory, SUVs, sedans, minivans, Ontario used vehicles"
+          content="car financing, car loans, used cars, auto loans, tricity area, buy here pay here, used car dealership, Ontario car finance, bad credit auto loans, no credit car loans, car search, credit rebuilding, special financing programs, bankruptcy car loans, car inventory, SUVs, sedans, minivans, Ontario used cars"
         />
       </head>
       <Google />

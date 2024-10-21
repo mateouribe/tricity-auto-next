@@ -27,7 +27,7 @@ const CustomerReviews = ({ t }: TranslationProps) => {
           <Review
             name={"Tabitha Hutson"}
             review={
-              "Just got approved for a vehicle. Awesome staff. Everyone was so friendly. I was congratulated by everyone before leaving. I recommend this company to everyone."
+              "Just got approved for a car. Awesome staff. Everyone was so friendly. I was congratulated by everyone before leaving. I recommend this company to everyone."
             }
             image={"/assets/images/review1-image.webp"}
           />

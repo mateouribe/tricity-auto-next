@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Steps from "@/components/home/steps";
 import Banner from "@/components/home/banner";
-import VehiclesSearch from "@/components/home/vehiclesSearch";
+import VehiclesSearch from "@/components/home/carsSearch";
 import WhyUs from "@/components/home/whyUs";
 import CustomerReviews from "@/components/customerReviews";
 import Contact from "@/components/contact";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.tricityauto.com",
     title: "Tricity Auto - Used Car Dealership in Waterloo, Ontario",
     description:
-      "Looking for used cars in Waterloo, ON? Tricity Auto offers financing solutions for every budget. Apply today and explore our inventory of quality pre-owned vehicles.",
+      "Looking for used cars in Waterloo, ON? Tricity Auto offers financing solutions for every budget. Apply today and explore our inventory of quality pre-owned cars.",
     images: [
       {
         url: "https://www.tricityauto.com/assets/images/home-banner.webp",

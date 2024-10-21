@@ -21,7 +21,7 @@ const VehiclesCards = ({ skeletonsQuantity, auxInventory }: Props) => {
     activeInventory.slice(0, 3).map((car, index) => (
       <CarsCard
         key={index}
-        vehicle={{
+        car={{
           title: `${car.YEAR} ${car.MAKE} ${car.MODEL} | ${car.TRIM}`,
           year: car.YEAR ? car.YEAR : "N/A",
           make: car.MAKE ? car.MAKE : "N/A",

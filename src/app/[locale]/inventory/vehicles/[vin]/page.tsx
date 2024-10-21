@@ -1,6 +1,6 @@
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/global/translationsProvider";
-import Page from "@/components/inventory/vehicle/page";
+import Page from "@/components/inventory/car/page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

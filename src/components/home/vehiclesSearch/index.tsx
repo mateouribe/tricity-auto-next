@@ -2,8 +2,8 @@ import { TranslationProps } from "@/types/i18nTypes";
 import Button from "../../custom/button";
 import Input from "../../custom/input";
 import MakeSelectList from "../../inventory/makeSelectList";
-import VehiclesQuantity from "../../inventory/vehiclesQuantity";
-import VehiclesCards from "../../inventory/vehiclesCards";
+import VehiclesQuantity from "../../inventory/carsQuantity";
+import VehiclesCards from "../../inventory/carsCards";
 const VehiclesSearch = ({ t }: TranslationProps) => {
   return (
     <section className="relative py-desktop bg-main">
