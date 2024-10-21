@@ -1,1 +1,5 @@
-{"makeSelect":"Filter by Make:","subtitle":"Vehicles","title":"Used Cars in Waterloo, ON - Inventory"}
+{
+  "makeSelect": "Filter by Make:",
+  "subtitle": "Cars",
+  "title": "Used Cars in Waterloo, ON - Inventory"
+}
