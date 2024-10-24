@@ -64,7 +64,9 @@ export const InventoryProvider = ({ children }: InventoryProviderProps) => {
   // Client-side fetch for inventory data
   const fetchInventory = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/inventory");
+      const response = await fetch(
+        "https://www.tricityautofinance.com/api/inventory"
+      );
       const data: InventoryItem[] = await response.json(); // Fetch from your external API
       setInventory(data); // Set the fetched data into state
     } catch (error) {
