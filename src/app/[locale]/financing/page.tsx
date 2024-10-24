@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     index: true, // Allow the page to be indexed.
     follow: true, // Follow links on the page.
   },
-  metadataBase: new URL("https://www.tricityauto.com"),
+  metadataBase: new URL("https://www.tricityautofinance.com"),
   alternates: {
     canonical: "./",
   },
