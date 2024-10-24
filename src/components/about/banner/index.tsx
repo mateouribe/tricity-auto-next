@@ -2,6 +2,7 @@ import { TranslationProps } from "@/types/i18nTypes";
 import SectionTitle from "@/components/global/sectionTitle";
 import WhyUsItem from "@/components/global/whyUsItem";
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = ({ t }: TranslationProps) => {
   return (
@@ -31,13 +32,20 @@ const Banner = ({ t }: TranslationProps) => {
           <div className="w-full md:w-[60%] lg:w-1/2">
             <p>{t("textTwo")}</p> <br />
             <br />
-            <p>{t("textThree")}</p>
+            <p>
+              {t("textThree")}{" "}
+              <Link href={"/financing"} className="text-main underline">
+                {t("textThreeCallToAction")}
+              </Link>{" "}
+              {t("textThreeContinuation")}
+            </p>
           </div>
         </div>
         <div className="grid w-full grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 mt-50">
           <WhyUsItem
             title={t("whyUs:oneTitle")}
             content={t("whyUs:oneDescription")}
+            href="/financing"
             icon={
               <svg
                 width="70"
@@ -57,6 +65,7 @@ const Banner = ({ t }: TranslationProps) => {
           <WhyUsItem
             title={t("whyUs:twoTitle")}
             content={t("whyUs:twoDescription")}
+            href="/financing"
             icon={
               <svg
                 width="70"
@@ -76,6 +85,7 @@ const Banner = ({ t }: TranslationProps) => {
           <WhyUsItem
             title={t("whyUs:threeTitle")}
             content={t("whyUs:threeDescription")}
+            href="/inventory"
             icon={
               <svg
                 width="70"

@@ -24,6 +24,7 @@ section {
       url("/assets/fonts/Outfit-Thin.woff") format("woff");
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
   }
 
   /* Light */
@@ -33,6 +34,7 @@ section {
       url("/assets/fonts/Outfit-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
   }
 
   /* Regular */
@@ -42,6 +44,7 @@ section {
       url("/assets/fonts/Outfit-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
   }
 
   /* Medium */
@@ -51,6 +54,7 @@ section {
       url("/assets/fonts/Outfit-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
   }
 
   /* Bold */
@@ -60,6 +64,7 @@ section {
       url("/assets/fonts/Outfit-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
   }
 
   /* Extra Bold */
@@ -69,6 +74,7 @@ section {
       url("/assets/fonts/Outfit-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
   }
 
   /* Black */
@@ -78,6 +84,7 @@ section {
       url("/assets/fonts/Outfit-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
   }
 }
 

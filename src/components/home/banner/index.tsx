@@ -22,7 +22,7 @@ const Banner = ({ t }: TranslationProps) => {
               clip: "rect(0, 0, 0, 0) !important",
             }}
           >
-            Used Cars Dealership in Waterloo, ON - Tricity Auto
+            Used Cars Dealership in Waterloo, ON | Tricity Auto
           </h1>
           <h2 className="text-center md:text-left text-36 md:text-48 lg:text-[70px] leading-none font-medium text-white title">
             {t("welcomeMessage")}

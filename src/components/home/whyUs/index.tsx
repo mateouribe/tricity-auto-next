@@ -3,6 +3,7 @@ import { TranslationProps } from "@/types/i18nTypes";
 import SectionTitle from "@/components/global/sectionTitle";
 import WhyUsItem from "@/components/global/whyUsItem";
 import Link from "next/link";
+import Image from "next/image";
 
 const WhyUs = ({ t }: TranslationProps) => {
   return (
@@ -70,6 +71,7 @@ const WhyUs = ({ t }: TranslationProps) => {
             <WhyUsItem
               title={t("whyUs:oneTitle")}
               content={t("whyUs:oneDescription")}
+              href="/financing"
               icon={
                 <svg
                   width="70"
@@ -89,6 +91,7 @@ const WhyUs = ({ t }: TranslationProps) => {
             <WhyUsItem
               title={t("whyUs:twoTitle")}
               content={t("whyUs:twoDescription")}
+              href="/financing"
               icon={
                 <svg
                   width="70"
@@ -108,6 +111,7 @@ const WhyUs = ({ t }: TranslationProps) => {
             <WhyUsItem
               title={t("whyUs:threeTitle")}
               content={t("whyUs:threeDescription")}
+              href="/inventory"
               icon={
                 <svg
                   width="70"
@@ -127,6 +131,7 @@ const WhyUs = ({ t }: TranslationProps) => {
             <WhyUsItem
               title={t("whyUs:fourTitle")}
               content={t("whyUs:fourDescription")}
+              href="/financing"
               icon={
                 <svg
                   width="70"
@@ -148,12 +153,13 @@ const WhyUs = ({ t }: TranslationProps) => {
 
         {/* Image */}
         <div className="w-full md:w-[40%] lg:w-1/2 h-auto flex items-stretch">
-          <img
+          <Image
             className="w-full h-full bg-contain"
             src={"/assets/images/why-us-image.webp"}
             alt="Interior photography of Tricity Auto installations, a used cars dealership in Waterloo, ON"
             width={1000}
             height={1000}
+            priority
           />
         </div>
       </section>

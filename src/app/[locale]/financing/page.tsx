@@ -3,20 +3,47 @@ import SectionTitle from "@/components/global/sectionTitle";
 import Form from "@/components/financing/form";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/global/translationsProvider";
-import Google from "@/components/global/google";
 
 export const metadata: Metadata = {
-  title: "Auto Financing in Waterloo, ON - Tricity Auto",
+  title: "Credit Application in Waterloo | Tricity Auto",
   description:
-    "Tricity Auto provides flexible car loans in Waterloo, ON with guaranteed approvals and a 0% turn-down policy. Get fast approval and the best rates tailored to your budget.",
+    "Explore flexible car financing solutions at Tricity Auto. Get approved today with affordable rates, easy terms, and personalized plans for all credit types",
+  authors: [
+    { name: "Tricity Auto Finance", url: "https://www.tricityautofinance.com" },
+  ],
   openGraph: {
-    title: "Auto Financing in Waterloo, ON - Tricity Auto",
+    title: "Credit Application in Waterloo | Tricity Auto",
     description:
-      "Tricity Auto provides flexible car loans in Waterloo, ON with guaranteed approvals and a 0% turn-down policy. Get fast approval and the best rates tailored to your budget.",
+      "Explore flexible car financing solutions at Tricity Auto. Get approved today with affordable rates, easy terms, and personalized plans for all credit types",
     url: "https://www.tricityautofinance.com/financing",
-    siteName: "Tricity Auto - Waterloo, ON Used Car Dealership",
-    locale: "en_US",
+    siteName: "Tricity Auto",
+    images: [
+      {
+        url: "https://www.tricityautofinance.com/assets/images/tricity-auto-social-media-img.png",
+        width: 1200,
+        height: 630,
+        alt: "Tricity Auto logo, used cars in Waterloo",
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Credit Application in Waterloo | Tricity Auto",
+    description:
+      "Explore flexible car financing solutions at Tricity Auto. Get approved today with affordable rates, easy terms, and personalized plans for all credit types",
+    creator: "@tricityauto",
+    images: [
+      "https://www.tricityautofinance.com/assets/images/tricity-auto-social-media-img.png",
+    ],
+  },
+  robots: {
+    index: true, // Allow the page to be indexed.
+    follow: true, // Follow links on the page.
+  },
+  metadataBase: new URL("https://www.tricityauto.com"),
+  alternates: {
+    canonical: "./",
   },
 };
 
@@ -31,7 +58,6 @@ const Financing = async ({
 
   return (
     <>
-      <Google />
       <TranslationsProvider
         locale={locale}
         resources={resources}

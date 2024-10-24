@@ -6,6 +6,7 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import gsap, { Expo } from "gsap";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "../languageSelector";
+import Image from "next/image";
 
 const Mobile = () => {
   const { t } = useTranslation();
@@ -145,10 +146,13 @@ const Mobile = () => {
       {/* Burger */}
 
       <Link href={"/"}>
-        <img
+        <Image
           src={"/assets/images/logo.svg"}
-          alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
+          alt="Tricity Auto logo, used cars in Waterloo"
           className="w-[134px] blacklogo bg-white rounded-full p-10"
+          width={134}
+          height={70}
+          priority
         />
       </Link>
       <div
@@ -162,11 +166,13 @@ const Mobile = () => {
       {/* Menu */}
       <div className="w-full h-[100vh] absolute bg-black top-0 right-0 p-mobile md:p-tablet flex flex-col contentMobileContainer  pb-[100px]">
         <Link href={"/"}>
-          <img
+          <Image
             src={"/assets/images/logo.svg"}
-            alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
+            alt="Tricity Auto logo, used cars in Waterloo"
             className="w-[134px] whiteLogo"
-            loading="lazy"
+            width={134}
+            height={70}
+            priority
           />
         </Link>
         <div className="flex items-center justify-center w-full h-full ">

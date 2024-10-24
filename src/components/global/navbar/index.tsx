@@ -13,7 +13,7 @@ const Navbar = () => {
           <Link href={"/"}>
             <Image
               className="w-auto bg-contain cursor-pointer h-100"
-              alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
+              alt="Tricity Auto logo, used cars in Waterloo"
               loading="lazy"
               src={"/assets/images/logo.svg"}
               width={134}

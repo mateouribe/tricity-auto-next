@@ -9,34 +9,45 @@ import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/global/translationsProvider";
 
 export const metadata: Metadata = {
-  title: "Used Car Dealership in Waterloo, Ontario - Tricity Auto",
+  title: "Used Cars Dealership in Waterloo, ON | Tricity Auto",
   description:
-    "Explore Tricity Auto, the top used car dealership in Waterloo, ON. We offer competitive financing solutions for all credit types and a wide selection of pre-owned cars, SUVs, and trucks. Drive away today with confidence!",
+    "Find quality used cars in Waterloo at Tricity Auto. Explore affordable options with easy financing tailored to your budget and all credit types",
+  authors: [
+    { name: "Tricity Auto Finance", url: "https://www.tricityautofinance.com" },
+  ],
   openGraph: {
-    type: "website",
-    url: "https://www.tricityauto.com",
-    title: "Tricity Auto - Used Car Dealership in Waterloo, Ontario",
+    title: "Used Cars Dealership in Waterloo, ON | Tricity Auto",
     description:
-      "Looking for used cars in Waterloo, ON? Tricity Auto offers financing solutions for every budget. Apply today and explore our inventory of quality pre-owned cars.",
+      "Find quality used cars in Waterloo at Tricity Auto. Explore affordable options with easy financing tailored to your budget and all credit types",
+    url: "https://www.tricityautofinance.com",
+    siteName: "Tricity Auto",
     images: [
       {
-        url: "https://www.tricityauto.com/assets/images/home-banner.webp",
+        url: "https://www.tricityautofinance.com/assets/images/tricity-auto-social-media-img.png",
         width: 1200,
         height: 630,
-        alt: "Tricity Auto used car dealership in Waterloo, Ontario - Competitive Financing Available",
+        alt: "Tricity Auto logo, used cars in Waterloo",
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tricity Auto - Used Car Dealership in Waterloo, Ontario",
+    title: "Used Cars Dealership in Waterloo, ON | Tricity Auto",
     description:
-      "Find affordable used cars and competitive financing at Tricity Auto. Serving Waterloo, Ontario, and beyond. Apply today!",
-    images: ["https://www.tricityauto.com/assets/images/home-banner.webp"],
+      "Find quality used cars in Waterloo at Tricity Auto. Explore affordable options with easy financing tailored to your budget and all credit types",
+    creator: "@tricityauto",
+    images: [
+      "https://www.tricityautofinance.com/assets/images/tricity-auto-social-media-img.png",
+    ],
+  },
+  robots: {
+    index: true, // Allow the page to be indexed.
+    follow: true, // Follow links on the page.
   },
   metadataBase: new URL("https://www.tricityauto.com"),
   alternates: {
-    canonical: "https://www.tricityauto.com",
+    canonical: "./",
   },
 };
 

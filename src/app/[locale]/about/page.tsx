@@ -4,45 +4,47 @@ import CustomerReviews from "@/components/customerReviews";
 import { Metadata } from "next";
 import React from "react";
 import initTranslations from "@/app/i18n";
-import Google from "@/components/global/google";
 
 export const metadata: Metadata = {
-  title: "Car Financing Solutions in Waterloo, ON - Tricity Auto",
+  title: "About Us - Used Cars in Waterloo, ON | Tricity Auto",
   description:
-    "With over 12 years of experience, Tricity Auto specializes in car financing solutions, including bad credit car loans and preferred-rate financing. Apply online today!",
-  keywords: [
-    "car financing Waterloo",
-    "bad credit car loans",
-    "car loans Ontario",
-    "Buy Here Pay Here Waterloo",
-    "online credit application",
-    "used car financing Ontario",
+    "Get used cars in Waterloo with flexible financing at Tricity Auto. Find top brands, rebuild credit, and enjoy easy approvals with free delivery",
+  authors: [
+    { name: "Tricity Auto Finance", url: "https://www.tricityautofinance.com" },
   ],
   openGraph: {
-    type: "website",
-    url: "https://www.tricityauto.com/about",
-    title: "Car Financing Solutions in Waterloo, ON | Tricity Auto",
+    title: "About Us - Used Cars in Waterloo, ON | Tricity Auto",
     description:
-      "Tricity Auto offers over a decade of experience in automotive financing. Whether you have bad credit or prefer low-interest rates, our online credit application makes approvals easy.",
+      "Get used cars in Waterloo with flexible financing at Tricity Auto. Find top brands, rebuild credit, and enjoy easy approvals with free delivery",
+    url: "https://www.tricityautofinance.com/about",
+    siteName: "Tricity Auto",
     images: [
       {
-        url: "https://www.tricityauto.com/assets/images/about-us-image.webp",
+        url: "https://www.tricityautofinance.com/assets/images/tricity-auto-social-media-img.png",
         width: 1200,
         height: 630,
-        alt: "Customer discussing car financing with dealer at Tricity Auto, Waterloo, ON",
+        alt: "Tricity Auto logo, used cars in Waterloo",
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Car Financing Solutions in Waterloo | Tricity Auto",
+    title: "About Us - Used Cars in Waterloo, ON | Tricity Auto",
     description:
-      "Get financing solutions for all credit types at Tricity Auto. Apply for car loans online with guaranteed approval!",
-    images: ["https://www.tricityauto.com/assets/images/about-us-image.webp"],
+      "Get used cars in Waterloo with flexible financing at Tricity Auto. Find top brands, rebuild credit, and enjoy easy approvals with free delivery",
+    creator: "@tricityauto",
+    images: [
+      "https://www.tricityautofinance.com/assets/images/tricity-auto-social-media-img.png",
+    ],
+  },
+  robots: {
+    index: true, // Allow the page to be indexed.
+    follow: true, // Follow links on the page.
   },
   metadataBase: new URL("https://www.tricityauto.com"),
   alternates: {
-    canonical: "https://www.tricityauto.com/about",
+    canonical: "./",
   },
 };
 
@@ -61,7 +63,6 @@ const About = async ({
 
   return (
     <>
-      <Google />
       <main>
         <Banner t={t} />
         <CustomerReviews t={t} />

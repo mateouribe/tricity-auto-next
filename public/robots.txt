@@ -1,9 +1,4 @@
-# Allow all user-agents (search engines) to access everything
 User-agent: *
-Disallow: /api/         # Prevent crawling of the api directory
-Disallow: /financing/   # Prevent crawling of financing pages
-Allow: /favicon.ico     # Explicitly allow favicon
-Allow: /               # Allow everything else (e.g. homepage and other public pages)
-
-# Link to your XML sitemap
+Disallow: 
+Disallow: /cgi-bin/
 Sitemap: https://www.tricityautofinance.com/sitemap.xml

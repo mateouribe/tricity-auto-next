@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Image from "next/image";
 import Button from "../../../custom/button";
 type Props = {
   title: string;
@@ -101,10 +102,13 @@ const StepsCard = ({
               hasHoverEffect={false}
             />
           )}
-          <img
+          <Image
             className="absolute bottom-0 -right-20 object-cover w-[50%] z-[1]"
             src={image}
             alt={`Step ${stepNumber} in the car buying process at Tricity Auto, a trusted used cars dealership in Waterloo, ON`}
+            width={300}
+            height={300}
+            priority
           />
         </div>
         <span

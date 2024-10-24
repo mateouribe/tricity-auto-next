@@ -19,7 +19,7 @@ const Footer = () => {
         <Image
           src={"/assets/images/logo.svg"}
           className="relative h-[100px]"
-          alt="Tricity Auto logo, a used cars dealership in Waterloo, ON"
+          alt="Tricity Auto logo, used cars in Waterloo"
           width={200}
           height={50}
           priority={false}
