@@ -46,7 +46,7 @@ export default async function RootLayout({
                 streetAddress: "109 Bridgeport Rd E",
                 addressLocality: "Waterloo, ON",
                 postalCode: "N2J 2K3",
-                addressCountry: "Canada",
+                addressCountry: "CA",
               },
               openingHoursSpecification: [
                 {
