@@ -6,7 +6,7 @@ const Banner = ({ t }: TranslationProps) => {
   return (
     <section className="py-tablet px-mobile md:px-tablet ">
       <div
-        className="w-full rounded-bl-[50px] rounded-tr-[50px] rounded-br-[10px] rounded-tl-[10px] min-h-[60vh] px-20 lg:px-50 py-[60px]"
+        className="w-full rounded-bl-[50px] rounded-tr-[50px] rounded-br-[10px] rounded-tl-[10px] px-20 lg:px-50 py-[60px]"
         style={{
           backgroundImage: `url('/assets/images/home-banner.webp')`,
           backgroundPosition: "center",

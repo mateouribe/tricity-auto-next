@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://www.tricityautofinance.com/sitemap.xml
+Disallow: /api/
+Sitemap: https://www.tricityautofinance.com/sitemap_index.xml
